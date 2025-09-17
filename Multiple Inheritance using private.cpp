@@ -1,0 +1,37 @@
+//akshit chordia
+//24070123008
+//entc A1
+
+
+#include <iostream>
+using namespace std;
+
+class A {
+private:
+    int num;
+public:
+    void setNum(int n) { num = n; }
+    int getNum() { return num; }
+};
+
+class B {
+public:
+    void showMsg() { cout << "Inside class B" << endl; }
+};
+
+class C : public A, public B {
+public:
+    void showData() { cout << "Number from A = " << getNum() << endl; }
+};
+
+int main() {
+    C obj;
+    obj.setNum(10);
+    obj.showMsg();
+    obj.showData();
+    return 0;
+}
+
+//Output:
+//Inside class B
+//Number from A = 10

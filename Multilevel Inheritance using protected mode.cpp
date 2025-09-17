@@ -1,0 +1,35 @@
+//akshit chordia
+//24070123008
+//entc A1
+
+#include <iostream>
+using namespace std;
+
+class A {
+protected:
+    int x;
+public:
+    void setX(int val) { x = val; }
+};
+
+class B : public A {
+public:
+    void displayX() { cout << "Value of x = " << x << endl; }
+};
+
+class C : public B {
+public:
+    void show() { cout << "Square of x = " << x * x << endl; }
+};
+
+int main() {
+    C obj;
+    obj.setX(5);
+    obj.displayX();
+    obj.show();
+    return 0;
+}
+
+//Output:
+//Value of x = 5
+//Square of x = 25
